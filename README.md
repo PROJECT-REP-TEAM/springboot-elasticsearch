@@ -19,13 +19,16 @@ Springboot2.1.1+elasticsearch6.5.3搭建的企业级搜索平台，支持PB级�
     - 配置<br/>
     解压后，打开 ```config/elasticsearch.yml```，对其中两项配置进行修改 <br/>
         - ```cluster.name```集群名称，随便填写，或者使用默认的“my-application”，注意，后面Java链接elasticsearch时，需要该配置。
-        - ```network.host```如果此不配置此项，其他机器无法链接当前elasticsearch。配置为：（0.0.0.0代表任何IP都可访问
+        - ```network.host```如果此不配置此项，其他机器无法链接当前elasticsearch。配置为：（0.0.0.0代表任何IP都可访问）
 2. analysis-ik 6.5.3 <br/>
     - 下载 <br/>
         https://github.com/medcl/elasticsearch-analysis-ik/releases
     - 解压 <br/>
         将下载的zip包，解压到：```plugins``` 目录 <br/>
         解压后的目录结构：```plugins/elasticsearch/*.jar```
+    - 启动 <br/>
+        Mac/Linux：运行 ```bin/elasticsearch```
+        Windows：运行 ```bin\elasticsearch.bat```
 3. essearch <br/>
     标准springboot项目，导入IDE运行即可。
 #### 四、essearch配置说明
