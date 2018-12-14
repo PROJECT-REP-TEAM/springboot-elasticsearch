@@ -27,7 +27,7 @@ Springboot2.1.1+elasticsearch6.5.3搭建的企业级搜索平台，支持PB级�
         将下载的zip包，解压到：```plugins``` 目录 <br/>
         解压后的目录结构：```plugins/elasticsearch/*.jar```
 3. essearch <br/>
-    标准springboot项目，倒入IDE运行即可。
+    标准springboot项目，导入IDE运行即可。
 #### 四、essearch配置说明
 
 1. 修改```application.properties->spring.data.elasticsearch.cluster-nodes```  elasticsearch地址
