@@ -1,37 +1,45 @@
 # springboot-elasticsearch
 
-#### 项目介绍
-Springboot2.1.1+elasticsearch6.5.3搭建的企业级搜索平台，目前已经支持中文分词，检索关键词高亮操作，如果帮到您，麻烦点下Star，谢谢。
+#### 一、项目介绍
+Springboot2.1.1+elasticsearch6.5.3搭建的企业级搜索平台，支持PB级数据，目前已经支持中文分词，检索关键词高亮操作，如果帮到您，麻烦点下Star，谢谢。
 
-#### 软件架构
-软件架构说明
+另外 Springboot2.1+Solr7.5 搭建的搜索引擎，已经支持文档搜索、数据库搜索、中文分词等。 [https://gitee.com/11230595/springboot-solr](https://gitee.com/11230595/springboot-solr)
 
+#### 二、软件架构
+1. Springboot2.1.1
+2. elasticsearch6.5.3
+3. spring-boot-starter-data-elasticsearch
+4. analysis-ik 6.5.3
 
-#### 安装教程
+#### 三、配置教程
 
-1. xxxx
-2. xxxx
-3. xxxx
+1. elasticsearch6.5.3
+    - 下载
+    https://www.elastic.co/cn/downloads/elasticsearch
+    - 配置
+    解压后，打开 ```config/elasticsearch.yml```，对其中两项配置进行修改
+        - ```cluster.name```集群名称，随便填写，或者使用默认的“my-application”，注意，后面Java链接elasticsearch时，需要该配置。
+        - ```network.host```如果此不配置此项，其他机器无法链接当前elasticsearch。配置为：（0.0.0.0代表任何IP都可访问
+2. analysis-ik 6.5.3
+    - 下载
+        https://github.com/medcl/elasticsearch-analysis-ik/releases
+    - 解压
+        将下载的zip包，解压到：plugins 目录
+        解压后的目录结构：```plugins/elasticsearch/*.jar```
+3. essearch
+    标准springboot项目，倒入IDE运行即可。
+#### 四、essearch配置说明
 
-#### 使用说明
+1. 修改```application.properties->spring.data.elasticsearch.cluster-nodes```  elasticsearch地址
+2. 修改```application.properties->spring.data.elasticsearch.cluster-name``` 集群名称，和上面配置的相对应
+3. 各种操作方式，请参考：``` /src/test/java/com/zhou/essearch/EssearchApplicationTests.java ```测试类
+4. 端口，文根等其他配置请可自行配置
 
-1. xxxx
-2. xxxx
-3. xxxx
+#### 五、查询接口返回数据截图
+![image](https://images.gitee.com/uploads/images/2018/1214/223726_f913dbf0_499215.png)
 
-#### 参与贡献
+#### 六、QQ群：83402555
 
-1. Fork 本项目
-2. 新建 Feat_xxx 分支
-3. 提交代码
-4. 新建 Pull Request
+#### 七、关注公众号
+![image](https://images.gitee.com/uploads/images/2018/1210/122022_148f50d8_499215.jpeg)
 
-
-#### 码云特技
-
-1. 使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2. 码云官方博客 [blog.gitee.com](https://blog.gitee.com)
-3. 你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解码云上的优秀开源项目
-4. [GVP](https://gitee.com/gvp) 全称是码云最有价值开源项目，是码云综合评定出的优秀开源项目
-5. 码云官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6. 码云封面人物是一档用来展示码云会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
