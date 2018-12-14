@@ -13,8 +13,8 @@ Springboot2.1.1+elasticsearch6.5.3搭建的企业级搜索平台，支持PB级�
 
 #### 三、配置教程
 
-1. elasticsearch6.5.3 <br/>
-    - 下载
+1. elasticsearch6.5.3  <br/>
+    - 下载 <br/>
     https://www.elastic.co/cn/downloads/elasticsearch <br/>
     - 配置<br/>
     解压后，打开 ```config/elasticsearch.yml```，对其中两项配置进行修改 <br/>
