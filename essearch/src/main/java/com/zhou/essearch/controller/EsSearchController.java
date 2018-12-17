@@ -2,7 +2,6 @@ package com.zhou.essearch.controller;
 
 import com.zhou.essearch.document.ProductDocument;
 import com.zhou.essearch.service.EsSearchService;
-import org.elasticsearch.search.SearchHits;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.*;
@@ -10,7 +9,6 @@ import org.springframework.web.bind.annotation.*;
 import javax.annotation.Resource;
 import java.util.List;
 import java.util.Map;
-import java.util.UUID;
 
 /**
  * elasticsearch 搜索
@@ -79,7 +77,7 @@ public class EsSearchController {
      */
     @RequestMapping("query/{keyword}")
     public List<ProductDocument> query(@PathVariable String keyword){
-        return esSearchService.query(keyword);
+        return esSearchService.query(keyword,ProductDocument.class);
     }
 
     /**

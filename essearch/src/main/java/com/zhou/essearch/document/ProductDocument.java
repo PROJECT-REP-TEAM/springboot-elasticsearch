@@ -17,6 +17,7 @@ import java.util.Date;
 @Document(indexName = "orders", type = "product")
 @Mapping(mappingPath = "productIndex.json") // 解决IK分词不能使用问题
 public class ProductDocument implements Serializable {
+
     @Id
     private String id;
     //@Field(analyzer = "ik_max_word",searchAnalyzer = "ik_max_word")

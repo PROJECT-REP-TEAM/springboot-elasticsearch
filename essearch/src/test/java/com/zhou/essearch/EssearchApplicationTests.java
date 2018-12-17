@@ -3,8 +3,8 @@ package com.zhou.essearch;
 import com.alibaba.fastjson.JSON;
 import com.zhou.essearch.document.ProductDocument;
 import com.zhou.essearch.document.ProductDocumentBuilder;
+import com.zhou.essearch.service.BaseSearchService;
 import com.zhou.essearch.service.EsSearchService;
-import org.elasticsearch.search.SearchHits;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;
@@ -75,7 +75,7 @@ public class EssearchApplicationTests {
 
     @Test
     public void query() {
-        log.info("【根据关键字搜索内容】：{}", JSON.toJSONString(esSearchService.query("无印良品荣耀")));
+        log.info("【根据关键字搜索内容】：{}", JSON.toJSONString(esSearchService.query("无印良品荣耀",ProductDocument.class)));
     }
 
     @Test
