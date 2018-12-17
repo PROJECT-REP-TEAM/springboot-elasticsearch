@@ -13,7 +13,7 @@ import java.util.Map;
 public interface BaseSearchService<T> {
 
     /**
-     * 搜索
+     * 搜 索
      * @param keyword
      * @param clazz
      * @return
