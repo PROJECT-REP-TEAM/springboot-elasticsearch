@@ -1,6 +1,7 @@
 package com.zhou.essearch.controller;
 
 import com.zhou.essearch.document.ProductDocument;
+import com.zhou.essearch.page.Page;
 import com.zhou.essearch.service.EsSearchService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -82,6 +83,7 @@ public class EsSearchController {
 
     /**
      * 搜索，命中关键字高亮
+     * http://localhost:8080/query_hit?keyword=无印良品荣耀&indexName=orders&fields=productName,productDesc
      * @param keyword   关键字
      * @param indexName 索引库名称
      * @param fields    搜索字段名称，多个以“，”分割
@@ -93,6 +95,25 @@ public class EsSearchController {
         if(fields.contains(",")) fieldNames = fields.split(",");
         else fieldNames[0] = fields;
         return esSearchService.queryHit(keyword,indexName,fieldNames);
+    }
+
+    /**
+     * 搜索，命中关键字高亮
+     * http://localhost:8080/query_hit_page?keyword=无印良品荣耀&indexName=orders&fields=productName,productDesc&pageNo=1&pageSize=1
+     * @param pageNo    当前页
+     * @param pageSize  每页显示的数据条数
+     * @param keyword   关键字
+     * @param indexName 索引库名称
+     * @param fields    搜索字段名称，多个以“，”分割
+     * @return
+     */
+    @RequestMapping("query_hit_page")
+    public Page<Map<String,Object>> queryHitByPage(@RequestParam int pageNo,@RequestParam int pageSize
+                                                    ,@RequestParam String keyword, @RequestParam String indexName, @RequestParam String fields){
+        String[] fieldNames = {};
+        if(fields.contains(",")) fieldNames = fields.split(",");
+        else fieldNames[0] = fields;
+        return esSearchService.queryHitByPage(pageNo,pageSize,keyword,indexName,fieldNames);
     }
 
     /**
