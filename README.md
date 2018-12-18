@@ -1,7 +1,7 @@
 # springboot-elasticsearch
 
 #### 一、项目介绍
-Springboot2.1.1+elasticsearch6.5.3搭建的企业级搜索平台，支持PB级数据，目前已经支持中文分词，检索关键词高亮操作，如果帮到您，麻烦点下Star，谢谢。
+Springboot2.1.1+elasticsearch6.5.3搭建的企业级搜索平台，支持PB级数据（需要elasticsearch分布式部署），目前已经支持中文分词，检索关键词高亮操作，如果帮到您，麻烦点下Star，谢谢。
 
 另外 Springboot2.1+Solr7.5 搭建的搜索引擎，已经支持文档搜索、数据库搜索、中文分词等。 [https://gitee.com/11230595/springboot-solr](https://gitee.com/11230595/springboot-solr)
 
