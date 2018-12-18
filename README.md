@@ -24,11 +24,8 @@ Springboot2.1.1+elasticsearch6.5.3搭建的企业级搜索平台，支持PB级�
         Mac/Linux：运行 ```bin/elasticsearch```<br/>
         Windows：运行 ```bin\elasticsearch.bat```
 2. analysis-ik 6.5.3 <br/>
-    - 下载 <br/>
-        https://github.com/medcl/elasticsearch-analysis-ik/releases
-    - 解压 <br/>
-        将下载的zip包，解压到：```plugins``` 目录 <br/>
-        解压后的目录结构：```plugins/elasticsearch/*.jar```
+    执行命令： <br/>
+    ```bin/elasticsearch-plugin install https://github.com/medcl/elasticsearch-analysis-ik/releases/download/v6.5.3/elasticsearch-analysis-ik-6.5.3.zip```
 3. essearch <br/>
     标准springboot项目，导入IDE运行即可。
 #### 四、essearch配置说明
