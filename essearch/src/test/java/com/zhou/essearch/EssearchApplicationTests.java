@@ -81,7 +81,7 @@ public class EssearchApplicationTests {
     @Test
     public void queryHit() {
 
-        String keyword = "无印良品荣耀";
+        String keyword = "联通尿素";
         String indexName = "orders";
 
         List<Map<String,Object>> searchHits = esSearchService.queryHit(keyword,indexName,"productName","productDesc");
@@ -92,7 +92,7 @@ public class EssearchApplicationTests {
     @Test
     public void queryHitByPage() {
 
-        String keyword = "无印良品荣耀";
+        String keyword = "联通尿素";
         String indexName = "orders";
 
         Page<Map<String,Object>> searchHits = esSearchService.queryHitByPage(1,1,keyword,indexName,"productName","productDesc");

@@ -6,24 +6,12 @@
     "productDesc": {
       "type": "text",
       "analyzer": "ik_max_word",
-      "search_analyzer": "ik_max_word",
-      "fields": {
-        "keyword": {
-          "type": "keyword",
-          "ignore_above": 256
-        }
-      }
+      "search_analyzer": "ik_max_word"
     },
     "productName": {
       "type": "text",
       "analyzer": "ik_max_word",
-      "search_analyzer": "ik_max_word",
-      "fields": {
-        "keyword": {
-          "type": "keyword",
-          "ignore_above": 256
-        }
-      }
+      "search_analyzer": "ik_max_word"
     },
     "updateTime": {
       "type": "long"
